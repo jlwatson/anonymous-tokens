@@ -12,6 +12,7 @@ use crate::Ticket;
 
 define_proof! {dlog, "DLOG Proof", (x), (X), (G) : X = (x * G)}
 
+#[derive(Serialize, Deserialize)]
 pub struct KeyPair {
     pub(crate) pp: PublicParams,
     pub(crate) sk: Scalar,
@@ -74,6 +75,7 @@ pub struct TokenSecret {
     pub(crate) multiplicative_blind: Scalar,
 }
 
+#[derive(Serialize, Deserialize)]
 pub struct TokenBlinded {
     secret: TokenSecret,
     public: RistrettoPoint,
