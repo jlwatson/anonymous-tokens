@@ -29,7 +29,8 @@ criterion = "0.3"
 [dependencies.curve25519-dalek]
 package = "curve25519-dalek-ng"
 version = "3"
-features = ["alloc", "std", "serde", "simd_backend"]
+features = ["alloc", "std", "serde"]
+#, "simd_backend"]
 
 [dependencies.zkp]
 version="0.8.0"
