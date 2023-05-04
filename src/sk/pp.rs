@@ -12,6 +12,7 @@ use crate::Ticket;
 
 define_proof! {dleq, "DLEQ Proof", (x), (X, T, W), (G) : X = (x * G), W = (x * T)}
 
+#[derive(Serialize, Deserialize)]
 pub struct KeyPair {
     pub(crate) pp: PublicParams,
     pub(crate) sk: Scalar,
@@ -74,6 +75,7 @@ pub struct TokenSecret {
     pub(crate) blind: Scalar,
 }
 
+#[derive(Serialize, Deserialize)]
 pub struct TokenBlinded {
     secret: TokenSecret,
     public: RistrettoPoint,
